@@ -1,0 +1,102 @@
+body {
+    font-family: "Finger Paint", cursive;
+    text-align: center;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+.container{
+    max-width: 600px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1)
+
+}
+
+h1 {
+    color: #333;
+    font-family: "Lato", sans-serif;
+}
+
+.game-board{
+    display: grid;
+    grid-template-rows: repeat(3, 100px);
+    grid-template-columns: repeat(3, 100px);
+    gap: 5px;
+    margin: 20px auto;
+    background-color: #e8ccff;
+    padding: 10px;
+    width: max-content;
+}
+
+/* Cellules du jeu */
+.cell {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    font-weight: bold;
+    background-color: white;
+    border: 3px solid black;
+    color: rgb(77, 11, 49);
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.cell1 {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    font-weight: bold;
+    background-color: white;
+    border: 3px solid black;
+    color: rgb(216, 98, 167);
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+/* Effet au survol */
+.cell:hover {
+    background-color: #e0f7fa;
+    transform: scale(1.1);
+}
+
+/* Animation d'apparition */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.cell {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Message de résultat */
+.result {
+    color: red;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 15px;
+    transition: color 0.3s;
+}
+
